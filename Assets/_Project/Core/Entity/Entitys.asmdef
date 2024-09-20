@@ -1,10 +1,7 @@
 {
-    "name": "Core.Enemys",
-    "rootNamespace": "Core.Enemys",
-    "references": [
-        "GUID:24da90f6c5155514596a9517a17b2b1e",
-        "GUID:c0a37b42971ac134c9325dc3805cd6fb"
-    ],
+    "name": "Entitys",
+    "rootNamespace": "Entitys",
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

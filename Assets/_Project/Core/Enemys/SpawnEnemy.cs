@@ -1,12 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Core.LvlStages;
+using Entitys;
 
 namespace Core.Enemys
 {
     public class SpawnEnemy : MonoBehaviour
     {
-        [field: SerializeField] private List<Enemy> _enemies;
+        [field: SerializeField] private List<Entity> _enemies;
         [field: SerializeField] private List<Transform> _spawnPoints;
         private LvlStage _lvlStage = new();
         
