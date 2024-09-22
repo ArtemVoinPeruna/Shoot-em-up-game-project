@@ -3,7 +3,7 @@ using UnityEngine;
 namespace Entitys
 {
     [CreateAssetMenu(fileName = "NewEntity", menuName = "Entity/EntityVariant")]
-    public class Entity : MonoBehaviour
+    public class Entity : ScriptableObject
     {
         [field: SerializeField] public int Speed { get; private set; }
         [field: SerializeField] public int Health { get; private set; }

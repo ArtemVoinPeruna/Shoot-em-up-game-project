@@ -10,8 +10,12 @@ namespace Core.Enemys
     {
         [field: SerializeField] private List<Entity> _enemies;
         [field: SerializeField] private List<Transform> _spawnPoints;
+        [field: SerializeField] private int NumberWaves;
 
-        private LvlStage _lvlStage = new();
+        private void Start() 
+        {
+            SpawnRandomEnemy();
+        }
         
         public void SpawnRandomEnemy()
         {
@@ -25,26 +29,25 @@ namespace Core.Enemys
 
             int MinDamageEnemy = _enemies.Min(x => x.Damage);
 
-            List<Entity> MinDamageEnemys = _enemies.Where(x => x.Damage <= MinDamageEnemy).ToList();
-            List<Entity> MaxDamageEnemys = _enemies.Where(x => x.Damage > MinDamageEnemy * 0.2).ToList();
+            List<Entity> DamageEnemys = new();
 
-            for (var i = 0; i < _enemies.Count; i++)
+            for (var i = 0; i < NumberWaves; i++)
             { 
                 if (ChanceReturn(MinDamageEnemy) == 1)
                 {
-                    GameObject fg = Instantiate(MinDamageEnemys[Random.Range(0, MinDamageEnemys.Count)].Enemy_PREFAB); //тут надо поменять GameObject на тип, который будет инфу по UI распредеять
+                    DamageEnemys = _enemies.Where(x => x.Damage <= MinDamageEnemy).ToList();
                 }
                 else
                 {
-                    
+                    DamageEnemys = _enemies.Where(x => x.Damage > MinDamageEnemy * 0.2).ToList();
                 }
+
+                GameObject EnemyObj = Instantiate(DamageEnemys[Random.Range(0, DamageEnemys.Count)].Enemy_PREFAB, _spawnPoints[Random.Range(0, _spawnPoints.Count)].position, Quaternion.identity); //тут надо поменять GameObject на тип, который будет инфу по UI распредеять
             }
 
-        }
+            MinDamageEnemy = (int)(MinDamageEnemy * 0.05);
 
-        private void GetEnemyByPriority()
-        {
-            
+            NumberWaves++;
         }
 
         public int ChanceReturn(params int[] chances)
