@@ -28,18 +28,19 @@ namespace Core.Enemys
             Transform spawnPoint = _spawnPoints[Random.Range(0, _spawnPoints.Count)];
 
             int MinDamageEnemy = _enemies.Min(x => x.Damage);
+            int MaxDamageEnemy = _enemies.Max(x => x.Damage);
 
             List<Entity> DamageEnemys = new();
 
             for (var i = 0; i < NumberWaves; i++)
             { 
-                if (ChanceReturn(MinDamageEnemy) == 1)
+                if (ChanceReturn(MinDamageEnemy, MaxDamageEnemy) == 1)
                 {
                     DamageEnemys = _enemies.Where(x => x.Damage <= MinDamageEnemy).ToList();
                 }
                 else
                 {
-                    DamageEnemys = _enemies.Where(x => x.Damage > MinDamageEnemy * 0.2).ToList();
+                    DamageEnemys = _enemies.Where(x => x.Damage > MinDamageEnemy * 0.1).ToList();
                 }
 
                 GameObject EnemyObj = Instantiate(DamageEnemys[Random.Range(0, DamageEnemys.Count)].Enemy_PREFAB, _spawnPoints[Random.Range(0, _spawnPoints.Count)].position, Quaternion.identity); //тут надо поменять GameObject на тип, который будет инфу по UI распредеять
