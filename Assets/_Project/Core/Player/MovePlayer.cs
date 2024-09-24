@@ -17,6 +17,15 @@ namespace Core.Player
             MovePlayerCharacter();
         }
 
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.CompareTag("Gun"))
+            {
+                Destroy(other.gameObject);
+                transform.position = movement;
+            }
+        }
+
         private void MovePlayerCharacter()
         {
             transform.position += (Vector3)movement * speed * Time.deltaTime;
