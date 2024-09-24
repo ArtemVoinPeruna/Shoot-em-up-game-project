@@ -1,10 +1,11 @@
 using UnityEngine;
+using Entitys;
 
 namespace Core.Player
 {
     public class MovePlayer : MonoBehaviour
     {
-        public float speed = 5f;
+        public Entity Player;
         private Vector2 movement;
 
         void Update()
@@ -17,9 +18,18 @@ namespace Core.Player
             MovePlayerCharacter();
         }
 
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.CompareTag("Gun"))
+            {
+                Destroy(other.gameObject);
+                transform.position = movement;
+            }
+        }
+
         private void MovePlayerCharacter()
         {
-            transform.position += (Vector3)movement * speed * Time.deltaTime;
+            transform.position += (Vector3)movement * Player.Speed * Time.deltaTime;
         }
     }
 }
