@@ -1,0 +1,16 @@
+{
+    "name": "Ui.Player",
+    "rootNamespace": "Ui.Player",
+    "references": [
+        "GUID:c0a37b42971ac134c9325dc3805cd6fb"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

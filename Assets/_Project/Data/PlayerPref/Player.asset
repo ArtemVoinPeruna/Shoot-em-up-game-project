@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbfaf2f193e26e846bdb7bf56b5899b4, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
-  <Speed>k__BackingField: 5
+  <Speed>k__BackingField: 25
   <Health>k__BackingField: 120
   <Damage>k__BackingField: 13
   <Enemy_PREFAB>k__BackingField: {fileID: 0}
