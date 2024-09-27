@@ -9,10 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbfaf2f193e26e846bdb7bf56b5899b4, type: 3}
-  m_Name: Player
+  m_Script: {fileID: 11500000, guid: c75649be937486e4abfd9d7deb4a3119, type: 3}
+  m_Name: MoneyBox
   m_EditorClassIdentifier: 
-  <Speed>k__BackingField: 5
-  <Health>k__BackingField: 120
-  <Damage>k__BackingField: 13
-  <Enemy_PREFAB>k__BackingField: {fileID: 0}
