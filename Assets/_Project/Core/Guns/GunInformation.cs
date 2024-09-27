@@ -2,9 +2,9 @@ using UnityEngine;
 
 namespace Core.Guns
 {
-    public class Gun : MonoBehaviour
+    public class GunInformation : MonoBehaviour
     {
-        
+    
         [CreateAssetMenu(fileName = "NewGun", menuName = "Guns/GunVariant")]
         public class Entity : ScriptableObject
         {
@@ -19,7 +19,6 @@ namespace Core.Guns
                 Attackspeed = _attackspeed;
                 Damage = _damage;
             }
-       
         }
     }
 }

@@ -10,7 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: AKA
-  m_EditorClassIdentifier: Assembly-CSharp::Gun/Entity
-  <Damage>k__BackingField: 25
-  <Gun_PREFAB>k__BackingField: {fileID: 0}
+  m_Name: Pistol
+  m_EditorClassIdentifier: Core.Guns:Core.Guns:Gun/Entity
+  <Damage>k__BackingField: 10
+  <Attackspeed>k__BackingField: 10
+  <Bulletspeed>k__BackingField: 10
+  <GunSprite>k__BackingField: {fileID: -4254059877319897387, guid: e170552b6351d0f4ba5d78bedf84689c,
+    type: 3}

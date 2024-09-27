@@ -1,7 +1,10 @@
 {
     "name": "Core.Guns",
     "rootNamespace": "Core.Guns",
-    "references": [],
+    "references": [
+        "GUID:fd50795c6099f1f4194d7f2ec99e076b",
+        "GUID:e2c5bf213263543448a916b69b161ced"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
