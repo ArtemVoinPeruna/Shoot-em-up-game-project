@@ -1,21 +1,24 @@
 using UnityEngine;
 
-public class Gun : MonoBehaviour
+namespace Core.Guns
 {
-   
-    [CreateAssetMenu(fileName = "NewGun", menuName = "Guns/GunVariant")]
-    public class Entity : ScriptableObject
+    public class Gun : MonoBehaviour
     {
-       // [field: SerializeField] public int AttackSpeed { get; private set; }
-       // [field: SerializeField] public int Ammo { get; private set; }
-        [field: SerializeField] public int Damage { get; private set; }
-        [field: SerializeField] public GameObject Gun_PREFAB { get; private set; }
-
-        public void GunChange (int _ammo, int _attackspeed,int _damage)
+    
+        [CreateAssetMenu(fileName = "NewGun", menuName = "Guns/GunVariant")]
+        public class Entity : ScriptableObject
         {
-           // Ammo
-           // AttackSpeed = _Attackspeed;
-            Damage = _damage;
+            [field: SerializeField] public int Damage { get; private set; }
+            [field: SerializeField] public int Reload { get; private set; }
+            [field: SerializeField] public int Speed { get; private set; }            
+            [field: SerializeField] public Sprite GunSprite { get; private set; }
+
+            public void GunChange (int _ammo, int _attackspeed,int _damage)
+            {
+            // Ammo
+            // AttackSpeed = _Attackspeed;
+                Damage = _damage;
+            }
         }
     }
 }
