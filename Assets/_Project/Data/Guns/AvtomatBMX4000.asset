@@ -10,7 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: NewGun
-  m_EditorClassIdentifier: Assembly-CSharp::Gun/Entity
-  <Damage>k__BackingField: 0
-  <Gun_PREFAB>k__BackingField: {fileID: 0}
+  m_Name: AvtomatBMX4000
+  m_EditorClassIdentifier: Core.Guns:Core.Guns:Gun/Entity
+  <Damage>k__BackingField: 1
+  <AttackSpeed>k__BackingField: 1
+  <Speed>k__BackingField: 4
+  <GunSprite>k__BackingField: {fileID: -2075056800869422959, guid: e170552b6351d0f4ba5d78bedf84689c,
+    type: 3}
