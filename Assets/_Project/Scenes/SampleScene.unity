@@ -29904,6 +29904,16 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 5507937644014554098, guid: 38293bf2b28d0264d8c7605d519081c0,
+        type: 3}
+      propertyPath: windowSize.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507937644014554098, guid: 38293bf2b28d0264d8c7605d519081c0,
+        type: 3}
+      propertyPath: windowSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7245108112706053897, guid: 38293bf2b28d0264d8c7605d519081c0,
         type: 3}
       propertyPath: m_LocalPosition.x
