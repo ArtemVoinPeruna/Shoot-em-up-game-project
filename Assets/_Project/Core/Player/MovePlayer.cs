@@ -5,9 +5,14 @@ namespace Core.Player
 {
     public class MovePlayer : MonoBehaviour
     {
+        [Header("Player")]
         public Entity Player;
         private Vector2 movement;
-        private float attractionSpeed = 5f; 
+        private float attractionSpeed = 3f;
+
+        [Header("Camera_move")]
+        public Camera mainCamera;
+        public Vector3 cameraOffset = new Vector3(0, 0, -10f); 
 
         void Update()
         {
@@ -17,6 +22,8 @@ namespace Core.Player
             movement = new Vector2(moveX, moveY);
 
             MovePlayerCharacter();
+
+            UpdateCameraPosition();
         }
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -42,6 +49,14 @@ namespace Core.Player
             }
 
             Destroy(item);
+        }
+
+        private void UpdateCameraPosition()
+        {
+            if (mainCamera != null)
+            {
+                mainCamera.transform.position = transform.position + cameraOffset;
+            }
         }
     }
 }
