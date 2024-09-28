@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: AvtomatMihaylova
-  m_EditorClassIdentifier: Core.Guns:Core.Guns:Gun/Entity
+  m_Script: {fileID: 11500000, guid: 0b3c7e54342d7ba4e8c21509b0a06b6f, type: 3}
+  m_Name: Avtomat_1
+  m_EditorClassIdentifier: 
   <Damage>k__BackingField: 1
   <AttackSpeed>k__BackingField: 1
-  <Speed>k__BackingField: 4
-  <GunSprite>k__BackingField: {fileID: 120935946699855177, guid: e170552b6351d0f4ba5d78bedf84689c,
+  <Speed>k__BackingField: 1
+  <GunSprite>k__BackingField: {fileID: -1089706990, guid: e170552b6351d0f4ba5d78bedf84689c,
     type: 3}
