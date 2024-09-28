@@ -29762,7 +29762,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &1751709123
 GameObject:
   m_ObjectHideFlags: 0
@@ -29831,8 +29830,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
->>>>>>> parent of 35335cc (Merge pull request #8 from ArtemVoinPeruna/Combining_scenes)
 --- !u!1 &1853978646
 GameObject:
   m_ObjectHideFlags: 0
@@ -30165,7 +30162,4 @@ SceneRoots:
   - {fileID: 1853978649}
   - {fileID: 1742151235}
   - {fileID: 913867912}
-<<<<<<< HEAD
   - {fileID: 1751709126}
-=======
->>>>>>> parent of 35335cc (Merge pull request #8 from ArtemVoinPeruna/Combining_scenes)
