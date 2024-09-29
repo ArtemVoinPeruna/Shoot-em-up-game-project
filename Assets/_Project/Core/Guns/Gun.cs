@@ -4,23 +4,29 @@ namespace Core.Guns
 {
     public class Gun : MonoBehaviour
     {
-        
-        [CreateAssetMenu(fileName = "NewGun", menuName = "Guns/GunVariant")]
-        public class Entity : ScriptableObject
-        {
-            [field: SerializeField] public int Damage { get; private set; }
-            [field: SerializeField] public int Attackspeed { get; private set; } // attackspeed
-            [field: SerializeField] public int Bulletspeed { get; private set; }            
-            [field: SerializeField] public Sprite GunSprite { get; private set; }
+        [field: SerializeField] public int BulletSpeed { get; private set; }
+        [field: SerializeField] public int AttackSpeed { get; private set; }
+        [field: SerializeField] public int Damage { get; private set; }
+        [field: SerializeField] public Sprite GunSprite { get; private set; }
 
-            public void GunChange (int _attackspeed, int _bulletspeed,int _damage)
+        public void EntityChange (int _bulletspeed, int _attackspeed, int _damage)
             {
-                Bulletspeed = _bulletspeed;
-                Attackspeed = _attackspeed;
+                BulletSpeed = _bulletspeed;
+                AttackSpeed = _attackspeed;
                 Damage = _damage;
             }
-       
-        }
+        private void Update()
+            {
+                RotateGun();
+            }
+
+        // Метод для поворота оружия
+        private void RotateGun()
+            {
+                // Пример поворота оружия вокруг оси Y
+                float rotationSpeed = 100f; // Скорость поворота
+                float rotationInput = Input.GetAxis("Horizontal"); // Ввод пользователя
+                transform.Rotate(Vector3.up, rotationInput * rotationSpeed * Time.deltaTime);
+            }
     }
 }
-
