@@ -13,26 +13,9 @@ namespace Core.Guns
         // Метод для изменения полей
         public void GunChange(int _speed, int _attackSpeed, int _damage)
         {
-            ChangeDamage(_damage);
-            ChangeAttackSpeed(_attackSpeed);
-            ChangeSpeed(_speed);
+            Damage = _damage;
+            Speed = _speed;
+            AttackSpeed = _attackSpeed;
         }
-
-        // Приватные методы для изменения значений
-        private void ChangeDamage(int newDamage)
-        {
-            Damage = newDamage;
-        }
-
-        private void ChangeAttackSpeed(int newAttackSpeed)
-        {
-            AttackSpeed = newAttackSpeed;
-        }
-
-        private void ChangeSpeed(int newSpeed)
-        {
-            Speed = newSpeed;
-        }
-
     }
 }
