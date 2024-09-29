@@ -1,7 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/_Project/View/Guns.meta
 guid: 5afe3c407dd404d428a7242da1a896d6
 folderAsset: yes
 DefaultImporter:
+========
+guid: adea6bfdbc6650144b0c02c080b0119b
+NativeFormatImporter:
+>>>>>>>> main:Assets/_Project/Data/Guns/Avtomat_1.asset.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
