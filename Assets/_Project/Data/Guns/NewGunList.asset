@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9880f0421410b14eb4b824bba7a4669, type: 3}
-  m_Name: Avtomat_3
+  m_Script: {fileID: 11500000, guid: 674b8ed03bd5ba848bcf0e69c8050dac, type: 3}
+  m_Name: NewGunList
   m_EditorClassIdentifier: 
-  <Damage>k__BackingField: 0
-  <AttackSpeed>k__BackingField: 0
-  <Speed>k__BackingField: 0
-  <GunSprite>k__BackingField: {fileID: 0}
+  availableGuns: []
