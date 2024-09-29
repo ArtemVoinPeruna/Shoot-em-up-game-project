@@ -5,7 +5,7 @@ using Core.Guns;
 public class WeaponManager : MonoBehaviour
 {
     public SpriteRenderer weaponSpriteRenderer; // Ссылка на компонент SpriteRenderer для отображения спрайта оружия
-    [field: SerializeField] private SpisokGun _spisokGun; // Массив доступных оружий (ScriptableObject)
+    [field: SerializeField] private GunBox _spisokGun; // Массив доступных оружий (ScriptableObject)
     private int currentWeaponIndex = 0;
     private Gun currentGun;
 
@@ -18,7 +18,7 @@ public class WeaponManager : MonoBehaviour
     // public void EquipWeapon(int weaponIndex)
     // {
     //     currentWeaponIndex = weaponIndex;
-    //     currentGun = _spisokGun[weaponIndex];
+    //     currentGun = _spisokGun.GunsList[weaponIndex];
         
     //     // Обновляем спрайт через SpriteRenderer
     //     if (weaponSpriteRenderer != null && currentGun.GunSprite != null)

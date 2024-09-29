@@ -4,8 +4,8 @@ using UnityEngine;
 namespace Core.Guns
 {
     [CreateAssetMenu(fileName = "NewGunList", menuName = "GunList/GunList")]
-    public class SpisokGun : ScriptableObject
+    public class GunBox : ScriptableObject
     {
-        public List <Gun> availableGuns { get; private set; }
+        public List <Gun> GunsList { get; private set; }
     }
 }
