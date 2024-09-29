@@ -1,4 +1,5 @@
 using Entitys;
+using System;
 using UnityEngine;
 
 namespace Core.Player
@@ -19,7 +20,7 @@ namespace Core.Player
             }
             else
             {
-                Debug.LogError("Attempted to initialize with a null RewardLine.");
+                throw new NotImplementedException();
             }
 
             return this;

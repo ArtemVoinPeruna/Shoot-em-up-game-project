@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbfaf2f193e26e846bdb7bf56b5899b4, type: 3}
-  m_Name: Player
+  m_Script: {fileID: 11500000, guid: 0b3c7e54342d7ba4e8c21509b0a06b6f, type: 3}
+  m_Name: Avtomat_3
   m_EditorClassIdentifier: 
-  <Speed>k__BackingField: 5
-  <Health>k__BackingField: 120
-  <Damage>k__BackingField: 13
-  <Enemy_PREFAB>k__BackingField: {fileID: 0}
+  <Damage>k__BackingField: 3
+  <AttackSpeed>k__BackingField: 2
+  <Speed>k__BackingField: 6
+  <GunSprite>k__BackingField: {fileID: 1582900530, guid: e170552b6351d0f4ba5d78bedf84689c,
+    type: 3}

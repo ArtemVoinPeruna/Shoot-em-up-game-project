@@ -9,10 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e4e54a0dd7939c45b08245ceadf5e94, type: 3}
-  m_Name: NewGun
+  m_Script: {fileID: 11500000, guid: b181195f928e23c4c8ed25378f98d933, type: 3}
+  m_Name: MoneyBoxSave
   m_EditorClassIdentifier: 
-  <BulletSpeed>k__BackingField: 0
-  <AttackSpeed>k__BackingField: 0
-  <Damage>k__BackingField: 0
-  <GunSprite>k__BackingField: {fileID: 0}

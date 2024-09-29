@@ -2,31 +2,37 @@ using UnityEngine;
 
 namespace Core.Guns
 {
-    public class Gun : MonoBehaviour
+    [CreateAssetMenu(fileName = "NewGun", menuName = "Guns/GunVariant")]
+    public class Gun : ScriptableObject
     {
-        [field: SerializeField] public int BulletSpeed { get; private set; }
-        [field: SerializeField] public int AttackSpeed { get; private set; }
         [field: SerializeField] public int Damage { get; private set; }
+        [field: SerializeField] public int AttackSpeed { get; private set; }
+        [field: SerializeField] public int Speed { get; private set; }
         [field: SerializeField] public Sprite GunSprite { get; private set; }
 
-        public void EntityChange (int _bulletspeed, int _attackspeed, int _damage)
-            {
-                BulletSpeed = _bulletspeed;
-                AttackSpeed = _attackspeed;
-                Damage = _damage;
-            }
-        private void Update()
-            {
-                RotateGun();
-            }
+        // Метод для изменения полей
+        public void GunChange(int _speed, int _attackSpeed, int _damage)
+        {
+            ChangeDamage(_damage);
+            ChangeAttackSpeed(_attackSpeed);
+            ChangeSpeed(_speed);
+        }
 
-        // Метод для поворота оружия
-        private void RotateGun()
-            {
-                // Пример поворота оружия вокруг оси Y
-                float rotationSpeed = 100f; // Скорость поворота
-                float rotationInput = Input.GetAxis("Horizontal"); // Ввод пользователя
-                transform.Rotate(Vector3.up, rotationInput * rotationSpeed * Time.deltaTime);
-            }
+        // Приватные методы для изменения значений
+        private void ChangeDamage(int newDamage)
+        {
+            Damage = newDamage;
+        }
+
+        private void ChangeAttackSpeed(int newAttackSpeed)
+        {
+            AttackSpeed = newAttackSpeed;
+        }
+
+        private void ChangeSpeed(int newSpeed)
+        {
+            Speed = newSpeed;
+        }
+
     }
 }
