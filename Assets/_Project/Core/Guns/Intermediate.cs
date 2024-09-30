@@ -13,7 +13,7 @@ public class Intermediate : MonoBehaviour
         if (_gun == null)
         {
             // Если _gun не назначен в инспекторе, находим его вручную
-            _gun = FindObjectOfType<WeaponManager>(); 
+            _gun = GetComponent<WeaponManager>(); 
         }
     }
 
@@ -33,9 +33,9 @@ public class Intermediate : MonoBehaviour
         }
     }
 
-    private void OnBulletAdded(Vector3 difference, float rotZ, int Damage, int Speed)
+    private void OnBulletAdded(float rotZ, int Damage, float Speed)
     {
         // Создаём пулю и инициируем её направление и параметры
-        Instantiate(Bullet_PREFAB, ParentBullet.position, Quaternion.identity).Init(difference, rotZ, ParentBullet);
+        Instantiate(Bullet_PREFAB, ParentBullet.position, Quaternion.identity).Init(rotZ, Damage, Speed, ParentBullet);
     }
 }

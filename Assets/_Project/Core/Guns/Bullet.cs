@@ -4,51 +4,49 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed;
-    public float lifetime;
-    public float distance;
-    public int damage;
+    private float speed;
+    private float lifetime = 5;
+    private float distance = 20;
+    private int damage;
     public LayerMask whatIsSolid;
-    private Vector2 direction;
     private Rigidbody2D rb;
-    public Transform ParentBullet;
+    private Transform FirePoint;
 
     // Метод для установки направления полета пули
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        // Устанавливаем скорость пули
-        rb.AddForce(ParentBullet.right * speed, ForceMode2D.Impulse);
+        Debug.Log(damage.ToString() + "        " + speed.ToString() + "       " + FirePoint.ToString());
+
+        rb.AddForce(FirePoint.right * speed, ForceMode2D.Impulse);
         // Уничтожаем пулю через lifetime секунд
         Destroy(gameObject, lifetime);
     }
 
-    public Bullet Init(Vector3 difference, float rotZ, Transform ParentBullet)
+    public Bullet Init(float rotZ, int Damage, float Speed, Transform ParentBullet)
     {
-        // Нормализуем направление
-        direction = difference.normalized;
-        this.ParentBullet = ParentBullet;
-        // Устанавливаем начальное вращение пули
+        FirePoint = ParentBullet;
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
-        // Возвращаем сам объект для возможного дальнейшего использования
+        damage=Damage;
+        speed=Speed;
         return this;
     }
 
-    private void Update()
-    {
-        // Проверяем столкновение с объектами через Raycast
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, direction, distance, whatIsSolid);
+    // private void Update()
+    // {
+    //     // Проверяем столкновение с объектами через Raycast
+    //     RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, direction, distance, whatIsSolid);
 
-        if (hitInfo.collider != null)
-        {
-            // Если пуля попала во врага, наносим урон
-            // if (hitInfo.collider.CompareTag("Enemy"))
-            // {
-            //     hitInfo.collider.GetComponent<Enemy>().TakeDamage(damage);
-            // }
+    //     if (hitInfo.collider != null)
+    //     {
+    //         // Если пуля попала во врага, наносим урон
+    //         // if (hitInfo.collider.CompareTag("Enemy"))
+    //         // {
+    //         //     hitInfo.collider.GetComponent<Enemy>().TakeDamage(damage);
+    //         // }
 
-            // // Уничтожаем пулю при столкновении
-            // Destroy(gameObject);
-        }
-    }
+    //         // // Уничтожаем пулю при столкновении
+    //         // Destroy(gameObject);
+    //     }
+    // }
 }

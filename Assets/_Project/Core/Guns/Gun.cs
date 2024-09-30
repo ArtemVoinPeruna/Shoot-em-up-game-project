@@ -7,7 +7,7 @@ namespace Core.Guns
     {
         [field: SerializeField] public int Damage { get; private set; }
         [field: SerializeField] public int AttackSpeed { get; private set; }
-        [field: SerializeField] public int Speed { get; private set; }
+        [field: SerializeField] public float Speed { get; private set; }
         [field: SerializeField] public Sprite GunSprite { get; private set; }
 
         // Метод для изменения полей

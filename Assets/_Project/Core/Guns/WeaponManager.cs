@@ -6,10 +6,10 @@ public class WeaponManager : MonoBehaviour
 {
     public SpriteRenderer weaponSpriteRenderer; // Ссылка на компонент SpriteRenderer для отображения спрайта оружия
     [field: SerializeField] private GunBox _gunBox; // Массив доступных оружий (ScriptableObject)
-    private int currentWeaponIndex = 0;
+    private int currentWeaponIndex;
     private Gun currentGun;
     public float offset;
-    public delegate void ShootAction(Vector3 difference, float rotZ, int Damage, int Speed);
+    public delegate void ShootAction(float rotZ, int Damage, float Speed);
     public event ShootAction OnShoot;
     private float timeBtwShots;
 
@@ -22,14 +22,14 @@ public class WeaponManager : MonoBehaviour
     public void EquipWeapon(int weaponIndex)
     {
         currentWeaponIndex = weaponIndex;
-        currentGun = _gunBox.GunsList[weaponIndex];
+        currentGun = _gunBox.GunsList[currentWeaponIndex];
         weaponSpriteRenderer.sprite = currentGun.GunSprite;
+        timeBtwShots = currentGun.AttackSpeed;
         ApplyWeaponStats();
     }
     private void ApplyWeaponStats()
     {
-        // Здесь вы можете изменить параметры игрока на основе текущего оружия
-        Debug.Log($"Current weapon damage: {currentGun.Damage}, attack speed: {currentGun.AttackSpeed}");
+        
     }
     void Update()
     {
@@ -41,7 +41,7 @@ public class WeaponManager : MonoBehaviour
             if (Input.GetMouseButton(0))
             {
                 timeBtwShots = currentGun.AttackSpeed;
-                OnShoot?.Invoke(difference, rotZ, currentGun.Damage, currentGun.Speed);
+                OnShoot?.Invoke(rotZ, currentGun.Damage, currentGun.Speed);
             }
         }
         else
