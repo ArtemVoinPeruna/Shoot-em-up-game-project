@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 674b8ed03bd5ba848bcf0e69c8050dac, type: 3}
   m_Name: NewGunList
   m_EditorClassIdentifier: 
-  availableGuns: []
+  <GunsList>k__BackingField:
+  - {fileID: 11400000, guid: 3d2bcab23634af940aeacf5c795a082a, type: 2}
+  - {fileID: 11400000, guid: 6a113e8ad2a3b8e4b86553dddc0528a8, type: 2}
+  - {fileID: 11400000, guid: 166be89691da2b44ea6466cad4e99f77, type: 2}
