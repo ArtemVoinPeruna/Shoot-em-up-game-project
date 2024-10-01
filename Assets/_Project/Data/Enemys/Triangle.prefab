@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5654979283295572275}
   - component: {fileID: 3143411751711075015}
   - component: {fileID: 6178437697304833856}
+  - component: {fileID: 2792598029716983185}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -125,3 +126,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _agent: {fileID: 3143411751711075015}
+--- !u!114 &2792598029716983185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8426408386020724224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a9bf7206c1a36f44a6a9d8f1bdfafbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponPrefabs:
+  - {fileID: 0}
+  dropChance: 0.209

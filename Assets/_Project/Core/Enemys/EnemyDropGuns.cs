@@ -1,19 +1,29 @@
 using UnityEngine;
 
-namespace Core.Enemys
+public class EnemyDropGun : MonoBehaviour
 {
-    public class NewMonoBehaviourScript : MonoBehaviour
+    // Список префабов оружия
+    public GameObject[] weaponPrefabs;
+    
+    // Шанс дропа (например, 0.2 для 20% шанса)
+    [Range(0f, 1f)] 
+    public float dropChance = 0.2f;
+    
+    // Метод, который вызывается при смерти врага
+    public void OnDeath()
     {
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
-        {
+        // Генерация случайного числа от 0 до 1
+        float randomValue = Random.Range(0f, 1f);
         
-        }
-
-        // Update is called once per frame
-        void Update()
+        // Проверка, выпадает ли оружие
+        if (randomValue <= dropChance)
         {
-        
+            // Выбираем случайное оружие из списка
+            int randomWeaponIndex = Random.Range(0, weaponPrefabs.Length);
+            GameObject weaponToDrop = weaponPrefabs[randomWeaponIndex];
+            
+            // Спавн оружия в позиции смерти врага
+            Instantiate(weaponToDrop, transform.position, Quaternion.identity);
         }
     }
 }
