@@ -6,12 +6,12 @@ namespace Core.Guns
     public class Gun : ScriptableObject
     {
         [field: SerializeField] public int Damage { get; private set; }
-        [field: SerializeField] public int AttackSpeed { get; private set; }
+        [field: SerializeField] public float AttackSpeed { get; private set; }
         [field: SerializeField] public float Speed { get; private set; }
         [field: SerializeField] public Sprite GunSprite { get; private set; }
 
         // Метод для изменения полей
-        public void GunChange(int _speed, int _attackSpeed, int _damage)
+        public void GunChange(int _speed, float _attackSpeed, int _damage)
         {
             Damage = _damage;
             Speed = _speed;

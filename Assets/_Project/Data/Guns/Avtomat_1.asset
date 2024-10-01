@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Avtomat_1
   m_EditorClassIdentifier: 
   <Damage>k__BackingField: 1
-  <AttackSpeed>k__BackingField: 2
+  <AttackSpeed>k__BackingField: 0.9
   <Speed>k__BackingField: 4
   <GunSprite>k__BackingField: {fileID: 7791460724961785476, guid: e170552b6351d0f4ba5d78bedf84689c,
     type: 3}
